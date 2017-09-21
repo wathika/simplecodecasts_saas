@@ -6,7 +6,7 @@ $(document).ready(function() {
   $("pro_form_submit_btn").click(function(event){
     event.preventDefault();
     $('input[type=submit]').prop('disabled', true);
-    var error = alse;
+    var error = false;
     var ccNum = $('#card_number').val(),
         cvvNum = $('#card_code').val(),
         expMonth = $('#card_month'),
@@ -25,9 +25,9 @@ $(document).ready(function() {
 
   }); //form submission
 
-function stripeRespondHandler(status, esponse){
+function stripeRespondHandler(status, response){
   //Get a referenceto the form
-  var f = $("new_user");
+  var f = $("#new_user");
 
   //Get a token from the response
   var token = response.id;
