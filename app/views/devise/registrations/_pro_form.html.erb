@@ -3,6 +3,8 @@
 
   <%= hidden_field_tag "plan", params[:plan] %>
 
+  <div class="payment-errors text-danger"></div>
+
   <div class="field form-group">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, class: 'form-control' %>
