@@ -42,7 +42,7 @@ $(document).ready(function(){
     var token = response.id;
 
     // Insert the token into the form so it gets submitted to the server:
-    $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+    $form.append($('<input type="hidden" name="user[stripe_card_token]" />').val(token));
 
     // Submit the form:
     $form.get(0).submit();
