@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
     #identify user
     @user = User.find(params[:user_id])
     #prepare form
-    @profile = @user.build_profile
+    @profile = Profile.new
 
   end
   def create
