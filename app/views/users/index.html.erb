@@ -1,9 +1,12 @@
 <div class="row">
-  <div class="col-md-8 col-md-2">
-    <ul>
+  <div class="col-md-8 col-md-offset-2">
+    <h1>The Sudi community</h1>
+    <p>Welcome to the Sudi community. Fill out a profile to be visible in the
+      community.</p>
+    <ul class="list-unstyled">
       <% @users.each do |user| %>
         <% if user.profile %>
-        <li class="list-unstyled">
+        <li>
           <div class="well row <%= cycle('white-bg','')%>">
             <div class="col-sm-4 text-center">
               <%= link_to user do %>
